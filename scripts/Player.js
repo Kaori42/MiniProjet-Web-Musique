@@ -62,15 +62,13 @@ function temps(prop){
 }
 
 function timer(){
-    let player = $("#player");
-    $('#timeline').attr("max", player.prop("duration"));
+    $('#timeline').attr("max", $("#player").prop("duration"));
     let {min, sec} = temps("duration");
     $('#timeTotal').text(min+":"+sec);
 }
 
 function Update(){
-    let player = $("#player");
-    $('#timeline').val((player.prop("currentTime")));
+    $('#timeline').val(($("#player").prop("currentTime")));
     let {min, sec} = temps("currentTime");
     $('#time').text(min+":"+sec);
 }
