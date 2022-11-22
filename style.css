@@ -1,0 +1,170 @@
+*{
+    margin:0;
+    padding:0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body{
+    background: #bfbfbf url("./images/background.jpg") repeat-x;
+}
+
+header{
+    padding: 40px 0;
+}
+
+header h1{
+    size: 45px;
+    text-align: center;
+    color: white;
+    text-shadow: black 10px 10px 10px;
+    text-transform: uppercase;
+    font-family: 'Limelight', cursive;
+}
+
+section{
+    padding-top: 134.5px;
+    display: flex;
+    justify-content: center;
+}
+
+.bw{
+    width: 140px;
+    height: 500px;
+    cursor: pointer;
+    background-image:url("./images/bw-image.jpg");
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    opacity: 70%;
+    position: absolute;
+    left: 0;
+}
+
+.color{
+    width: 140px;
+    height: 500px;
+    cursor: pointer;
+    background-image:url("./images/color-image.jpg");
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    position: absolute;
+    left: 140px;
+}
+
+#part2 div{
+    background-position: -140px 0;
+}
+
+#part3 div{
+    background-position: -280px 0;
+}
+
+#part4 div{
+    background-position: -420px 0;
+}
+
+#part5 div{
+    background-position: -560px 0;
+}
+
+.description{
+    width: 250px;
+    height: 500px;
+    padding: 20px;
+    background-color: white;
+    position: absolute;
+    left: 140px;
+}
+
+.description h2{
+    font-size: 20px;
+    text-align: center;
+    text-transform: uppercase;
+    padding-bottom: 15px;
+}
+
+.description h3{
+    padding: 10px;
+    margin-top: 30px;
+    font-size: 30px;
+    background-color: red;
+    color: white;
+    text-align: center;
+    border-radius: 20px;
+    font-family: 'Lobster', cursive;
+}
+
+.description p{
+    margin-top: 40px;
+    font-size: 25px;
+    background-color: white;
+    text-align: center;
+    font-family: 'Lobster', cursive;
+}
+
+#main-menu ul li{
+    float: left;
+    width: 140px;
+    height: 500px;
+    overflow: hidden;
+    position: relative;
+}
+
+div.description p{
+    cursor: pointer;
+}
+
+#playerContainer{
+    text-align: center;
+    display: none;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    margin-top: 5%;
+    background: rgb(45, 45, 45);
+    color: #bfbfbf;
+}
+
+#playerPlay {
+    width: 32px;
+    height: 32px;
+    display: none;
+}
+
+#playerPause {
+    width: 32px;
+    height: 32px;
+}
+
+#playerStop {
+    width: 32px;
+    height: 32px;
+}
+
+#timeline {
+    width: 60%;
+}
+
+#change_vol {
+    -webkit-appearance: slider-vertical;
+    height: 60px;
+}
+
+#playerVolume {
+    width: 32px;
+    height: 32px;
+}
+
+#upgrades{
+    position: absolute;
+    float: left;
+    padding: 20px;
+    margin: 0 0 0 10%;
+    color: white;
+    text-shadow: black 0 0 15px;
+    background-color: #7925a1;
+    border-radius: 15px;
+}
+
+#time{
+    display: inline;
+}

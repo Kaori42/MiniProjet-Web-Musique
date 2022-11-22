@@ -1,0 +1,2 @@
+Centrage du selecteur d'artistes (css)
+Création player audio personnalisé (hmtl/css/js)

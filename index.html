@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>TOP FIVE de Ma Musique</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="scripts/Anim.js"></script>
+    <script src="scripts/Player.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Limelight&family=Lobster&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1 class="tete">TOP FIVE de Ma Musique</h1>
+    </header>
+    <div id="upgrades">
+        <h3>Améliorations</h3>
+    </div>
+    <section id="main-menu">
+        <ul>
+            <li>
+                <div id="part1" class="images">
+                    <div class="bw"></div>
+                    <div class="color"></div>
+                </div>
+                <div class="description">
+                    <h2>Drake</h2>
+                    <h3>Ses meilleurs titres</h3>
+                    <p onclick="openSong('./musiques/onedance.opus')">One Dance</p>
+                    <p onclick="openSong('./musiques/godplan.opus')">God's Plan</p>
+                    <p>Jimmy Cooks</p>
+                </div>
+            </li>
+            <li>
+                <div id="part2" class="images">
+                    <div class="bw"></div>
+                    <div class="color"></div>
+                </div>
+                <div class="description">
+                    <h2>Rihanna</h2>
+                    <h3>Ses meilleurs titres</h3>
+                    <p>Disturbia</p>
+                    <p>Don't Stop The Music</p>
+                    <p>Love On The Brain</p>
+                </div>
+            </li>
+            <li>
+                <div id="part3" class="images">
+                    <div class="bw"></div>
+                    <div class="color"></div>
+                </div>
+                <div class="description">
+                    <h2>Jay-Z</h2>
+                    <h3>Ses meilleurs titres</h3>
+                    <p>Empire State Of Mind</p>
+                    <p>Ni**as in Paris</p>
+                    <p>Numb / Encore</p>
+                </div>
+            </li>
+            <li>
+                <div id="part4" class="images">
+                    <div class="bw"></div>
+                    <div class="color"></div>
+                </div>
+                <div class="description">
+                    <h2>Slipknot</h2>
+                    <h3>Ses meilleurs titres</h3>
+                    <p>Duality</p>
+                    <p>Psychosocial</p>
+                    <p>Wait and Bleed</p>
+                </div>
+            </li>
+            <li>
+                <div id="part5" class="images">
+                    <div class="bw"></div>
+                    <div class="color"></div>
+                </div>
+                <div class="description">
+                    <h2>Daft<br>Punk</h2>
+                    <h3>Ses meilleurs titres</h3>
+                    <p>Get Lucky</p>
+                    <p>Instant Crush</p>
+                    <p>One More Time</p>
+                    <p>Around the World</p>
+                </div>
+            </li>
+        </ul>
+    </section>
+    <div id="playerContainer">
+
+        <button
+            onclick="play()"
+            id="playerPlay"
+            title="Play">
+        </button>
+
+        <button
+            onclick="pause()"
+            id="playerPause"
+            title="Pause">
+        </button>
+
+        <button
+            onclick="stop()"
+            id="playerStop"
+            title="Stop">
+        </button>
+
+        <audio id="player" controls autoplay>
+            <source src="" />
+        </audio>
+
+        <span id="time">0:00 </span>
+        <span>/</span>
+        <span id="timeTotal"> 0:00</span>
+
+        <label for="timeline"></label>
+        <input
+                type="range"
+                id="timeline"
+                onchange="change_time()"
+                step="0.01" min="0" max="150" value="0"
+        >
+
+        <button
+            onclick="mute_vol()"
+            id="playerVolume"
+            title="Mute">
+        </button>
+
+        <label for="change_vol"></label>
+        <input
+            type="range"
+            orient="vertical"
+            id="change_vol"
+            onchange="change_vol()"
+            step="0.01" min="0" max="1" value="1"
+        >
+
+        <span id="musicName">|   Drake couille</span>
+    </div>
+</body>
+</html>
