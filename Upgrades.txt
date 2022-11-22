@@ -1,2 +1,3 @@
 Centrage du selecteur d'artistes (css)
-Création player audio personnalisé (hmtl/css/js)
+Création player audio personnalisé (Beaucoup de tout mais surtout Jquery)
+Ajout bouton spotify/RS
