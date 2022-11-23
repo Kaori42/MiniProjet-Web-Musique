@@ -1,13 +1,11 @@
 let open=0;
+let mute=0;
 function openSong($musique){
     if (open===0){
-        $('#playerContainer').css('display','block');
+        $('#playerContainer').css('display','flex');
         open=1;
     }
     changeSong($musique);
-    setTimeout(function (){
-        timer();
-    }, 10)
     $("#player").on("timeupdate", Update);
 }
 
@@ -25,7 +23,16 @@ function stop(){
 }
 
 function change_vol() {
-    $("#player").prop("volume",$('#change_vol').val());
+    let vol = $('#change_vol');
+    let mutelogo = $("#playerVolume");
+    $("#player").prop("volume",vol.val());
+    if (vol.val()==='0'){
+        mutelogo.css('background-image', 'url("./player/mute.png")');
+        mute=1;
+    } else {
+        mutelogo.css('background-image', 'url("./player/volume.png")');
+        mute=0;
+    }
 }
 
 function play(){
@@ -42,14 +49,24 @@ function pause(){
 
 function mute_vol(){
     let player = $("#player");
-    player.prop("muted",!player.prop("muted"));
+    let mutelogo = $("#playerVolume");
+    if(mute===0){
+        player.prop("muted", true);
+        mutelogo.css('background-image', 'url("./player/mute.png")');
+        mute=1;
+    }
+    else{
+        player.prop("muted", false);
+        mutelogo.css('background-image', 'url("./player/volume.png")');
+        mute=0;
+    }
 }
 
 function change_time(){
     $('#player').prop("currentTime",$('#timeline').val());
 }
 
-function temps(prop){
+function timeC(prop){
     let player = $("#player");
     let min = Math.floor(player.prop(prop)/60);
     let sec = Math.floor(((player.prop(prop)/60)-min)*60);
@@ -61,14 +78,19 @@ function temps(prop){
     };
 }
 
-function timer(){
+function duration(){
     $('#timeline').attr("max", $("#player").prop("duration"));
-    let {min, sec} = temps("duration");
+    let {min, sec} = timeC("duration");
     $('#timeTotal').text(min+":"+sec);
 }
 
-function Update(){
+function currentTime(){
     $('#timeline').val(($("#player").prop("currentTime")));
-    let {min, sec} = temps("currentTime");
+    let {min, sec} = timeC("currentTime");
     $('#time').text(min+":"+sec);
+}
+
+function Update(){
+    duration();
+    currentTime();
 }

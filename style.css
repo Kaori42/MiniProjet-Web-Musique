@@ -114,44 +114,112 @@ div.description p{
 }
 
 #playerContainer{
+    justify-content: center;
+    align-items: center;
     text-align: center;
     display: none;
     position: absolute;
     bottom: 0;
     width: 100%;
+    height: 100px;
     margin-top: 5%;
-    background: rgb(45, 45, 45);
-    color: #bfbfbf;
+    background: #807373;
+    color: #fff;
+}
+
+#playerContainer *{
+    margin: 10px;
+}
+
+#playerContainer button{
+    cursor: pointer;
 }
 
 #playerPlay {
     width: 32px;
     height: 32px;
     display: none;
+    background-image: url("./player/play.png");
+    background-size: 32px 32px;
+    border: none;
+    background-color: transparent;
+    background-repeat: no-repeat;
 }
 
 #playerPause {
     width: 32px;
     height: 32px;
+    background-image: url("./player/pause.png");
+    background-size: 32px 32px;
+    border: none;
+    background-color: transparent;
+    background-repeat: no-repeat;
 }
 
 #playerStop {
     width: 32px;
     height: 32px;
+    background-image: url("./player/stop.png");
+    background-size: 32px 32px;
+    border: none;
+    background-color: transparent;
+    background-repeat: no-repeat;
 }
 
 #timeline {
     width: 60%;
 }
 
+#Volume{
+    position: relative;
+}
+
 #change_vol {
     -webkit-appearance: slider-vertical;
     height: 60px;
+    width: 10px;
+    display: none;
+    position: absolute;
+    margin-bottom: 25px;
 }
 
 #playerVolume {
     width: 32px;
+    background-image: url("./player/volume.png");
+    background-size: 32px 32px;
+    border: none;
+    background-color: transparent;
+    background-repeat: no-repeat;
     height: 32px;
+}
+
+#Volume:hover #change_vol {
+    display: inline-flex;
+    bottom: 15px;
+    left: 11px;
+}
+
+#timeline{
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+
+#timeline::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    background: #ff4500;
+    cursor: pointer;
+    box-shadow: 0 0 2px 0 #555;
+    transition: background .3s ease-in-out;
+}
+
+#timeline::-webkit-slider-runnable-track{
+    -webkit-appearance: none;
+    box-shadow: none;
+    border: none;
+    background: transparent;
 }
 
 #upgrades{
@@ -167,4 +235,8 @@ div.description p{
 
 #time{
     display: inline;
+}
+
+#musicName{
+/*titre musique en gros puis artiste en petit*/
 }

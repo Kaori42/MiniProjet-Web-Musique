@@ -10,11 +10,9 @@ $(function () {
             if (openedIndex === newIndex) {
                 animateItem($item,false,250);
                 openedIndex = -1;
-            }
-            else {
+            } else {
                 if ((newIndex>=0) && (newIndex <totalMainMenuItems) ) {
-                    animateItem($mainMenuItems.eq(openedIndex), false,
-                        250);
+                    animateItem($mainMenuItems.eq(openedIndex), false, 250);
                     openedIndex = newIndex;
                     animateItem($item, true, 250);
                 }
@@ -25,13 +23,11 @@ $(function () {
 });
 
 animateItem = function($item,toOpen,speed) {
-    var $colorImage = $item.find(".color"),
-        itemParam,colorImageParam;
+    var $colorImage = $item.find(".color"), itemParam,colorImageParam;
     if (toOpen) {
         itemParam ={width:"420px"};
         colorImageParam ={left:"0px"}
-    }
-    else {
+    } else {
         itemParam ={width:"140px"};
         colorImageParam ={left:"140px"}
     }
