@@ -118,28 +118,30 @@
 
         <label for="timeline"></label>
         <input
-                type="range"
-                id="timeline"
-                onchange="change_time()"
-                step="0.01" min="0" max="150" value="0"
+            type="range"
+            id="timeline"
+            onchange="change_time()"
+            step="0.01" min="0" max="150" value="0"
         >
 
         <div id="Volume">
             <button
-                    onclick="mute_vol()"
-                    id="playerVolume"
-                    title="Mute"
+                onclick="mute_vol()"
+                id="playerVolume"
+                title="Mute"
             >
             </button>
 
-            <label for="change_vol"></label>
-            <input
-                    type="range"
-                    orient="vertical"
-                    id="change_vol"
-                    onchange="change_vol()"
-                    step="0.01" min="0" max="1" value="1"
-            >
+            <div id="box_vol">
+                <label for="change_vol"></label>
+                <input
+                        type="range"
+                        orient="vertical"
+                        id="change_vol"
+                        onchange="change_vol()"
+                        step="0.01" min="0" max="1" value="1"
+                >
+            </div>
         </div>
 
         <span id="musicName">Drake couille</span>

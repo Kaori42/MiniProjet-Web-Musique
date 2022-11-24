@@ -178,9 +178,26 @@ div.description p{
     -webkit-appearance: slider-vertical;
     height: 60px;
     width: 10px;
+    position: absolute;
+    margin-bottom: 25px;
+    bottom: -15px;
+    left: 0;
+}
+
+#change_vol::-webkit-slider-thumb{
+    cursor: pointer;
+}
+
+#box_vol{
+    height: 80px;
+    width: 30px;
     display: none;
     position: absolute;
     margin-bottom: 25px;
+    background: #396073;
+    bottom: 25px;
+    left: 0;
+    border-radius: 15px;
 }
 
 #playerVolume {
@@ -193,10 +210,8 @@ div.description p{
     height: 32px;
 }
 
-#Volume:hover #change_vol {
+#Volume:hover #box_vol {
     display: inline-flex;
-    bottom: 15px;
-    left: 11px;
 }
 
 #timeline{
