@@ -1,5 +1,7 @@
 let open=0;
 let mute=0;
+let playing=1;
+let e;
 function openSong($musique){
     if (open===0){
         $('#playerContainer').css('display','flex');
@@ -7,6 +9,8 @@ function openSong($musique){
     }
     changeSong($musique);
     $("#player").on("timeupdate", Update);
+    $("body").on("keydown",Key);
+    play();
 }
 
 function changeSong($musique){
@@ -23,13 +27,16 @@ function stop(){
 }
 
 function change_vol() {
+    let player = $("#player");
     let vol = $('#change_vol');
     let mutelogo = $("#playerVolume");
-    $("#player").prop("volume",vol.val());
+    player.prop("volume",vol.val());
     if (vol.val()==='0'){
+        player.prop("muted", true);
         mutelogo.css('background-image', 'url("./player/mute.png")');
         mute=1;
     } else {
+        player.prop("muted", false);
         mutelogo.css('background-image', 'url("./player/volume.png")');
         mute=0;
     }
@@ -93,4 +100,20 @@ function currentTime(){
 function Update(){
     duration();
     currentTime();
+    if($('#player').prop("paused")===true){
+        pause();
+    } else play();
+}
+
+function Key(e){
+    if(e.keyCode == 32){
+        if(playing===0){
+            play();
+            playing=1;
+        }
+        else{
+            pause();
+            playing=0;
+        }
+    }
 }
