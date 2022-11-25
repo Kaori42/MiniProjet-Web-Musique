@@ -125,6 +125,29 @@ div.description p{
     margin-top: 5%;
     background: #807373;
     color: #fff;
+    animation: 1s slide-in;
+}
+
+#playerContainer.hide{
+    animation: 1s slide-out;
+}
+
+@keyframes slide-in {
+    from {
+        height: 0;
+    }
+    to {
+        height: 100px;
+    }
+}
+
+@keyframes slide-out {
+    from {
+        height: 100px;
+    }
+    to {
+        height: 0;
+    }
 }
 
 #playerContainer *{
@@ -215,6 +238,29 @@ div.description p{
 
 #Volume:hover #box_vol {
     display: inline-flex;
+    animation: 0.2s slide_box;
+}
+
+#Volume:hover #change_vol {
+    animation: 0.2s slide_vol;
+}
+
+@keyframes slide_box {
+    from {
+        height: 0;
+    }
+    to {
+        height: 80px;
+    }
+}
+
+@keyframes slide_vol {
+    from {
+        height: 0;
+    }
+    to {
+        height: 60px;
+    }
 }
 
 #timeline{

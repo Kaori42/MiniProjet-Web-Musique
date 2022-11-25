@@ -21,8 +21,13 @@ function changeSong($musique){
 }
 
 function stop(){
-    $('#playerContainer').css('display','none');
+    let player = $("#playerContainer");
     changeSong("");
+    player.addClass('hide');
+    setTimeout( function(){
+        player.css('display','none');
+        player.removeClass('hide');
+    },1000);
     open=0;
 }
 
