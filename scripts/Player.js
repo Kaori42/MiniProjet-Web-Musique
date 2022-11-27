@@ -1,7 +1,7 @@
 let open=0;
 let mute=0;
 let playing=1;
-let e;
+let upopen=0;
 function openSong($musique){
     if (open===0){
         $('#playerContainer').css('display','flex');
@@ -156,4 +156,15 @@ function name(i){
     let song = songs[i];
     $("#Title").innerHTML = song.name;
     $("#Artist").innerHTML = song.artist;
+}
+
+function openUpgrades(){
+    let up = $("#listeUpgrades");
+    if (upopen===0){
+        up.css('display','block');
+        upopen=1;
+    } else {
+        up.css('display','none');
+        upopen=0;
+    }
 }

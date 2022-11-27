@@ -1,3 +1,4 @@
 Centrage du selecteur d'artistes (css)
 Création player audio personnalisé (Beaucoup de tout mais surtout Jquery)
-Ajout bouton spotify/RS
+Ajout de boutons pour les réseaux sociaux
+Ajout d'un bouton pour voir les améliorations/changements

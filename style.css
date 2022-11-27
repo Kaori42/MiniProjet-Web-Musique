@@ -123,9 +123,17 @@ div.description p{
     width: 100%;
     height: 100px;
     margin-top: 5%;
-    background: #807373;
+    background: linear-gradient(transparent, #4D4C61, #4D4C61, transparent);
     color: #fff;
     animation: 1s slide-in;
+}
+
+#playerContainer *{
+    margin: 10px;
+}
+
+#playerContainer button{
+    cursor: pointer;
 }
 
 #playerContainer.hide{
@@ -148,14 +156,6 @@ div.description p{
     to {
         height: 0;
     }
-}
-
-#playerContainer *{
-    margin: 10px;
-}
-
-#playerContainer button{
-    cursor: pointer;
 }
 
 #playerPlay {
@@ -198,32 +198,69 @@ div.description p{
 }
 
 #change_vol {
-    -webkit-appearance: slider-vertical;
-    height: 60px;
-    width: 10px;
+    -webkit-transform: rotate(270deg);
+    -moz-transform: rotate(270deg);
+    height: 10px;
+    width: 60px;
     position: absolute;
     margin-bottom: 25px;
-    bottom: -15px;
-    left: 0;
-    background: linear-gradient(to right, rgb(0, 168, 255) 0%, rgb(0, 168, 255) 100%, rgb(255, 255, 255) 100%, rgb(255, 255, 255) 100%);
+    bottom: 10px;
+    left: -25px;
+	cursor: pointer;
+	border-radius: 5px;
+    background: linear-gradient(0.25turn, #2A35AD, #5EF7F2);
 }
 
-#change_vol::-webkit-slider-thumb{
+/* Change-vol Chrome */
+#change_vol::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+	border-width: 3px;
+	border-color: light-gray;
+    background: transparent;
     cursor: pointer;
+    box-shadow: 0 0 2px 0 #555;
+    transition: background .3s ease-in-out;
 }
 
+#change_vol::-webkit-slider-runnable-track{
+    -webkit-appearance: none;
+    box-shadow: none;
+    border: none;
+    background: transparent;
+}
+
+/* Change-vol Firefox */
+#change_vol::-moz-range-thumb {
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+	border-width: 3px;
+	border-color: light-gray;
+    background: transparent;
+    cursor: pointer;
+    box-shadow: 0 0 2px 0 #555;
+    transition: background .3s ease-in-out;
+}
+
+#change_vol::-moz-range-track{
+    box-shadow: none;
+    border: none;
+    background: transparent;
+}
 #box_vol{
     height: 80px;
     width: 30px;
     display: none;
     position: absolute;
     margin-bottom: 25px;
-    background: #396073;
+    background: #1A1A1A;
     bottom: 25px;
     left: 0;
     border-radius: 15px;
-    opacity: 0.9;
-    border: BLUE 1px solid;
+    border: linear-gradient(#5B31B5, #2CA1B0) 1px solid;
 }
 
 #playerVolume {
@@ -256,24 +293,37 @@ div.description p{
 
 @keyframes slide_vol {
     from {
-        height: 0;
+        width: 0;
+		left: 2px;
+		bottom: -30px;
     }
     to {
-        height: 60px;
+        width: 60px;
+		left: -25px;
+		bottom: 10px;
     }
 }
 
 #timeline{
     -webkit-appearance: none;
-    -moz-appearance: none;
+	background: linear-gradient(#5830B0, #2C9EB0);
+	border-radius: 6px;
+	background-image: linear-gradient(#5830B0, #2C9EB0);
+	background-size: 100%;
+	background-repeat: no-repeat;
 }
 
+#time{
+    display: inline;
+}
+/* Slider custom pour Chromium */
 #timeline::-webkit-slider-thumb {
     -webkit-appearance: none;
-    height: 20px;
-    width: 20px;
-    border-radius: 50%;
-    background: #ff4500;
+    height: 14px;
+    width: 14px;
+	border-width: 3px;
+    border-radius: 70%;
+    background: #404040;
     cursor: pointer;
     box-shadow: 0 0 2px 0 #555;
     transition: background .3s ease-in-out;
@@ -281,6 +331,24 @@ div.description p{
 
 #timeline::-webkit-slider-runnable-track{
     -webkit-appearance: none;
+    box-shadow: none;
+    border: none;
+    background: transparent;
+}
+
+/* Slider custom pour Firefox */
+#timeline::-moz-range-thumb {
+    height: 14px;
+    width: 14px;
+	border-width: 3px;
+    border-radius: 70%;
+    background: #404040;
+    cursor: pointer;
+    box-shadow: 0 0 2px 0 #555;
+    transition: background .3s ease-in-out;
+}
+
+#timeline::-moz-range-track{
     box-shadow: none;
     border: none;
     background: transparent;
@@ -295,10 +363,18 @@ div.description p{
     text-shadow: black 0 0 15px;
     background-color: #7925a1;
     border-radius: 15px;
+	cursor: pointer;
 }
 
-#time{
-    display: inline;
+#listeUpgrades{
+	float: left;
+	position: absolute;	  
+	display: none;					
+}
+
+#listeUpgrades li {
+	color: white;
+	font-size: 22px;		 
 }
 
 #MusicID{
@@ -318,16 +394,13 @@ div.description p{
     border: none;
 }
 
-/*justify-content: center;
-align-items: center;
-text-align: center;*/
-
 #Title{
-    font-size: 20px;
+    font-size: 18px;
 }
 
 #Artist{
-    font-size: 16px;
+    text-transform: uppercase;
+	font-size: 22px;
 }
 
 #Cover{
