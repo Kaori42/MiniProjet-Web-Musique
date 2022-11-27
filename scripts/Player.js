@@ -17,6 +17,7 @@ function changeSong($musique){
     let player = $("#player");
     if($musique!==(player.attr("src"))){
         player.attr("src", $musique);
+        //name();
     }
 }
 
@@ -31,12 +32,11 @@ function stop(){
     open=0;
 }
 
-function change_vol() {
+function change_vol(volume) {
     let player = $("#player");
-    let vol = $('#change_vol');
     let mutelogo = $("#playerVolume");
-    player.prop("volume",vol.val());
-    if (vol.val()==='0'){
+    player.prop("volume",volume);
+    if (volume==='0'){
         player.prop("muted", true);
         mutelogo.css('background-image', 'url("./player/mute.png")');
         mute=1;
@@ -74,8 +74,8 @@ function mute_vol(){
     }
 }
 
-function change_time(){
-    $('#player').prop("currentTime",$('#timeline').val());
+function change_time(time){
+    $('#player').prop("currentTime",time);
 }
 
 function timeC(prop){
@@ -111,14 +111,49 @@ function Update(){
 }
 
 function Key(e){
-    if(e.keyCode == 32){
-        if(playing===0){
-            play();
-            playing=1;
-        }
-        else{
-            pause();
-            playing=0;
-        }
+    vol = $("#change_vol");
+    time = $("#timeline");
+    switch(e.keyCode){
+        case 32:
+            if(playing===0){
+                play();
+                playing=1;
+            } else{
+                pause();
+                playing=0;
+            }
+            break;
+        case 37: //left
+            change_time(parseFloat(time.val())-10);
+            break;
+        case 38: //up
+            if (parseFloat(vol.val()) + 0.1<=1) {
+                change_vol(parseFloat(vol.val()) + 0.1);
+                vol.val(parseFloat(vol.val()) + 0.1);
+            } else{
+                change_vol(1);
+                vol.val(1);
+            }
+            break;
+        case 39: //right
+            change_time(parseFloat(time.val())+10);
+            break;
+        case 40: //down
+            if (parseFloat(vol.val()) - 0.1>=0) {
+                change_vol(parseFloat(vol.val()) - 0.1);
+                vol.val(parseFloat(vol.val()) - 0.1);
+            } else{
+                change_vol(0);
+                vol.val(0);
+            }
+            break;
+        default:
+            break;
     }
+}
+
+function name(i){
+    let song = songs[i];
+    $("#Title").innerHTML = song.name;
+    $("#Artist").innerHTML = song.artist;
 }

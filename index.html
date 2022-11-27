@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="style.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
     <script src="scripts/Anim.js"></script>
+    <script src="musiques/songs.js"></script>
     <script src="scripts/Player.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -120,8 +121,8 @@
         <input
             type="range"
             id="timeline"
-            onchange="change_time()"
-            step="0.01" min="0" max="150" value="0"
+            oninput="change_time(this.value)"
+            step="0.01" min="0" max="" value="0"
         >
 
         <div id="Volume">
@@ -138,13 +139,17 @@
                         type="range"
                         orient="vertical"
                         id="change_vol"
-                        onchange="change_vol()"
+                        oninput="change_vol(this.value)"
                         step="0.01" min="0" max="1" value="1"
                 >
             </div>
         </div>
 
-        <span id="musicName">Drake - One Dance</span>
+        <div id="MusicID">
+            <p id="Title">One Dance</p>
+            <p id="Artist">Drake</p>
+            <img id="Cover" src="./icon/facebook.png" alt="Cover" width="100" height="100">
+        </div>
     </div>
 </body>
 </html>

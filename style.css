@@ -301,6 +301,41 @@ div.description p{
     display: inline;
 }
 
-#musicName{
-/*titre musique en gros puis artiste en petit*/
+#MusicID{
+    position: absolute;
+    right: 0;
+    text-align: right;
+    margin: 0;
+    border: none;
+    align-items: normal;
+    justify-content: normal;
+}
+
+#Title,#Artist{
+    position: relative;
+    right: 100px;
+    margin: 0;
+    border: none;
+}
+
+/*justify-content: center;
+align-items: center;
+text-align: center;*/
+
+#Title{
+    font-size: 20px;
+}
+
+#Artist{
+    font-size: 16px;
+}
+
+#Cover{
+    display: inline-block;
+    position: absolute;
+    right: 0;
+    width: 100px;
+    height: 100px;
+    margin: 0;
+    border: none;
 }
