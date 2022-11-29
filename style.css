@@ -198,6 +198,7 @@ div.description p{
 }
 
 #change_vol {
+    -webkit-appearance: none;
     -webkit-transform: rotate(270deg);
     -moz-transform: rotate(270deg);
     height: 10px;
@@ -214,11 +215,10 @@ div.description p{
 /* Change-vol Chrome */
 #change_vol::-webkit-slider-thumb {
     -webkit-appearance: none;
-    height: 10px;
-    width: 10px;
-    border-radius: 50%;
-	border-width: 3px;
-	border-color: light-gray;
+    border: solid 3px #a6a6a6;
+    height: 15px;
+    width: 15px;
+    border-radius:50%;
     background: transparent;
     cursor: pointer;
     box-shadow: 0 0 2px 0 #555;
@@ -238,7 +238,7 @@ div.description p{
     width: 10px;
     border-radius: 50%;
 	border-width: 3px;
-	border-color: light-gray;
+	border-color: #a6a6a6;
     background: transparent;
     cursor: pointer;
     box-shadow: 0 0 2px 0 #555;
@@ -306,11 +306,9 @@ div.description p{
 
 #timeline{
     -webkit-appearance: none;
-	background: linear-gradient(#5830B0, #2C9EB0);
-	border-radius: 6px;
-	background-image: linear-gradient(#5830B0, #2C9EB0);
-	background-size: 100%;
-	background-repeat: no-repeat;
+    border-radius: 6px;
+    background-size: 100%;
+    background: linear-gradient(#5830B0, #2C9EB0) no-repeat;
 }
 
 #time{
@@ -319,9 +317,9 @@ div.description p{
 /* Slider custom pour Chromium */
 #timeline::-webkit-slider-thumb {
     -webkit-appearance: none;
-    height: 14px;
-    width: 14px;
-	border-width: 3px;
+    border: solid 3px #a6a6a6;
+    height: 19px;
+    width: 19px;
     border-radius: 70%;
     background: #404040;
     cursor: pointer;
@@ -338,8 +336,8 @@ div.description p{
 
 /* Slider custom pour Firefox */
 #timeline::-moz-range-thumb {
-    height: 14px;
-    width: 14px;
+    height: 11px;
+    width: 11px;
 	border-width: 3px;
     border-radius: 70%;
     background: #404040;
@@ -377,38 +375,17 @@ div.description p{
 	font-size: 22px;		 
 }
 
-#MusicID{
-    position: absolute;
-    right: 0;
-    text-align: right;
-    margin: 0;
-    border: none;
-    align-items: normal;
-    justify-content: normal;
+#musicArtist{
+    text-transform: uppercase;
+    font-size: 22px;
 }
 
-#Title,#Artist{
-    position: relative;
-    right: 100px;
-    margin: 0;
-    border: none;
-}
-
-#Title{
+#musicName{
     font-size: 18px;
 }
 
-#Artist{
-    text-transform: uppercase;
-	font-size: 22px;
-}
-
-#Cover{
-    display: inline-block;
-    position: absolute;
-    right: 0;
-    width: 100px;
-    height: 100px;
-    margin: 0;
-    border: none;
+#albumImg{
+    width: 38px;
+    height: 38px;
+    background-size: 38px 38px;
 }

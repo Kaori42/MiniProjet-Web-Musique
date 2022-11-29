@@ -2,22 +2,22 @@ let open=0;
 let mute=0;
 let playing=1;
 let upopen=0;
-function openSong($musique){
+function openSong($id){
     if (open===0){
         $('#playerContainer').css('display','flex');
         open=1;
     }
-    changeSong($musique);
+    changeSong($id);
     $("#player").on("timeupdate", Update);
     $("body").on("keydown",Key);
     play();
 }
 
-function changeSong($musique){
+function changeSong($id){
     let player = $("#player");
-    if($musique!==(player.attr("src"))){
-        player.attr("src", $musique);
-        //name();
+    if(songs[$id].path!==(player.attr("src"))){
+        player.attr("src", songs[$id].path);
+        change($id);
     }
 }
 
@@ -152,10 +152,11 @@ function Key(e){
     }
 }
 
-function name(i){
-    let song = songs[i];
-    $("#Title").innerHTML = song.name;
-    $("#Artist").innerHTML = song.artist;
+function change($id){
+    let song = songs[$id];
+    $("#musicName").text(song.name);
+    $("#musicArtist").text(song.artist);
+    $("#albumImg").attr("src", song.cover);
 }
 
 function openUpgrades(){
