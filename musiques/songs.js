@@ -27,7 +27,7 @@ let songs = [
         name: "Don't Stop The Music",
         path: "../musiques/dontstopthemusic.opus",
         artist: "Rihanna",
-        cover: "../images/dontstopthemusic.jpg"
+        cover: "../images/disturbia.jpg"
     },
     {
         name: "Love On The Brain",
@@ -43,15 +43,15 @@ let songs = [
     },
     {
         name: "Ni**as in Paris",
-        path: "../musiques/ni**asinparis.opus",
+        path: "../musiques/niasinparis.opus",
         artist: "Jay-Z",
-        cover: "../images/ni**asinparis.jpg"
+        cover: "../images/niasinparis.jpg"
     },
     {
         name: "Numb / Encore",
-        path: "../musiques/numb.opus",
+        path: "../musiques/numbencore.opus",
         artist: "Jay-Z",
-        cover: "../images/numb.jpg"
+        cover: "../images/numbencore.jpg"
     },
     {
         name: "Duality",
@@ -81,18 +81,18 @@ let songs = [
         name: "Instant Crush",
         path: "../musiques/instantcrush.opus",
         artist: "Daft Punk",
-        cover: "../images/instantcrush.jpg"
+        cover: "../images/getlucky.jpg"
     },
     {
         name: "One More Time",
-        path: "../musiques/.opus",
+        path: "../musiques/onemoretime.opus",
         artist: "Daft Punk",
-        cover: "../images/.jpg"
+        cover: "../images/onemoretime.jpg"
     },
     {
         name: "Around the World",
-        path: "../musiques/.opus",
+        path: "../musiques/aroundtheworld.opus",
         artist: "Daft Punk",
-        cover: "../images/.jpg"
+        cover: "../images/aroundtheworld.jpg"
     }
 ]

@@ -22,12 +22,12 @@ function changeSong($id){
 }
 
 function stop(){
-    let player = $("#playerContainer");
-    changeSong("");
-    player.addClass('hide');
+    let playerC = $("#playerContainer");
+    $("#player").attr("src", "");
+    playerC.addClass('hide');
     setTimeout( function(){
-        player.css('display','none');
-        player.removeClass('hide');
+        playerC.css('display','none');
+        playerC.removeClass('hide');
     },1000);
     open=0;
 }
@@ -114,7 +114,7 @@ function Key(e){
     vol = $("#change_vol");
     time = $("#timeline");
     switch(e.keyCode){
-        case 32:
+        case 32: //space
             if(playing===0){
                 play();
                 playing=1;
