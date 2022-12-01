@@ -111,8 +111,8 @@ function Update(){
 }
 
 function Key(e){
-    vol = $("#change_vol");
-    time = $("#timeline");
+    let vol = $("#change_vol");
+    let time = $("#timeline");
     switch(e.keyCode){
         case 32: //space
             if(playing===0){
