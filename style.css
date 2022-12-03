@@ -101,6 +101,20 @@ section{
     font-family: 'Lobster', cursive;
 }
 
+.description .social{
+    text-align: center;
+    margin: auto;
+    padding: 10px;
+    position: relative;
+    bottom: -50px;
+}
+
+.description img{
+    width: 30px;
+    height: 30px;
+    padding: 5px;
+}
+
 #main-menu ul li{
     float: left;
     width: 140px;
@@ -375,8 +389,14 @@ div.description p{
 
 #listeUpgrades{
 	float: left;
-	position: absolute;	  
-	display: none;					
+	position: absolute;
+    top: 20%;
+	display: none;
+    margin: 0 0 0 10%;
+    color: white;
+    text-shadow: black 0 0 15px;
+    background-color: #7925a1;
+    border-radius: 15px;
 }
 
 #listeUpgrades li {
