@@ -161,11 +161,14 @@ function change($id){
 
 function openUpgrades(){
     let up = $("#listeUpgrades");
+	let upMenu = $("#upgradesMenu");
     if (upopen===0){
         up.css('display','block');
+		upMenu.css('height', '500.5px');
         upopen=1;
     } else {
         up.css('display','none');
+		upMenu.css('height', '0');
         upopen=0;
     }
 }

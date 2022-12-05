@@ -387,21 +387,32 @@ div.description p{
 	cursor: pointer;
 }
 
-#listeUpgrades{
+#upgradesMenu{
 	float: left;
+	background: linear-gradient(0.25turn, #7925a1, transparent);
 	position: absolute;
+	margin-top: 7%;
+	width: 22%;
+}
+
+#listeUpgrades{
+	background-color: #f3ec78;
+    background-image: linear-gradient(0.25turn, #2CA1B0, white);
+    background-size: 100%;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent; 
+    -moz-text-fill-color: transparent;
     top: 20%;
 	display: none;
     margin: 0 0 0 10%;
-    color: white;
     text-shadow: black 0 0 15px;
-    background-color: #7925a1;
     border-radius: 15px;
 }
 
 #listeUpgrades li {
-	color: white;
-	font-size: 22px;		 
+	font-size: 22px;
+	margin-top: 15%;
 }
 
 #musicArtist{
