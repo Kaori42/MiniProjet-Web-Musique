@@ -410,6 +410,10 @@ div.description p{
 	cursor: pointer;
 }
 
+#upgrades:hover{
+    background-color: #a625a1;
+}
+
 #upgradesMenu{
 	float: left;
 	background: linear-gradient(0.25turn, #7925a1, transparent);
@@ -455,8 +459,11 @@ div.description p{
 }
 
 #listeUpgrades li {
+    margin-top: 4%;
 	font-size: 22px;
-	margin-top: 6%;
+    min-height: 50px;
+    word-wrap: break-word;
+    height: auto;
 }
 
 #musicArtist{

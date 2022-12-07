@@ -18,4 +18,5 @@ Vous pouvez cliquer sur les titres des musiques pour ouvrir le player.
 - Ajout de boutons pour les réseaux sociaux (Html, Css)
 - Ajout d'un bouton pour voir les améliorations/changements (Html, Css, Jquery)
 - Animation d'apparition du player et du bouton pour voir les améliorations (Css, Jquery)
+- Support du controle de la musique avec les touches du clavier avec espace = pause, flèches haut/bas pour le volume et gauche/droite pour le temps (Jquery)
 - Support d'écrans haute résolution 1080p et + (Css)
