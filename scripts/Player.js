@@ -28,7 +28,7 @@ function stop(){
     setTimeout( function(){
         playerC.css('display','none');
         playerC.removeClass('hide');
-    },1000);
+    },990);
     open=0;
 }
 
@@ -160,15 +160,16 @@ function change($id){
 }
 
 function openUpgrades(){
-    let up = $("#listeUpgrades");
-	let upMenu = $("#upgradesMenu");
+    let up = $("#upgradesMenu");
     if (upopen===0){
         up.css('display','block');
-		upMenu.css('height', '500.5px');
         upopen=1;
     } else {
-        up.css('display','none');
-		upMenu.css('height', '0');
+        up.addClass('hide');
+        setTimeout( function(){
+            up.css('display','none');
+            up.removeClass('hide');
+        },190);
         upopen=0;
     }
 }

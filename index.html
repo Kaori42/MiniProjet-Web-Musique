@@ -4,9 +4,9 @@
     <meta charset="UTF-8">
     <title>TOP FIVE de Ma Musique</title>
     <link rel="stylesheet" href="style.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
     <script src="scripts/Anim.js"></script>
-    <script src="scripts/songs.js"></script>
+    <script src="scripts/Songs.js"></script>
     <script src="scripts/Player.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -33,6 +33,12 @@
             </li>
             <li>
                 Ajout d'un bouton pour voir les améliorations/changements (Html, Css, Jquery)
+            </li>
+            <li>
+                Animation d'apparition du player et du bouton pour voir les améliorations (Css, Jquery)
+            </li>
+            <li>
+                Support d'écran haute résolution (Css)
             </li>
         </ul>
     </div>
@@ -190,9 +196,9 @@
             </div>
         </div>
         <img src="" id="albumImg" alt="Album Cover">
-        <span id="musicArtist">Drake</span>
-        <span style="font-size: 32px; margin-bottom: 15.5px">|</span>
-        <span id="musicName">One Dance</span>
+        <span id="musicArtist"></span>
+        <span id="separator">|</span>
+        <span id="musicName"></span>
     </div>
 </body>
 </html>

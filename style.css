@@ -2,6 +2,7 @@
     margin:0;
     padding:0;
     font-family: Arial, Helvetica, sans-serif;
+    overflow: hidden;
 }
 
 body{
@@ -13,7 +14,6 @@ header{
 }
 
 header h1{
-    size: 45px;
     text-align: center;
     color: white;
     text-shadow: black 10px 10px 10px;
@@ -143,6 +143,8 @@ div.description p{
     margin-top: 5%;
     background: linear-gradient(transparent, #4D4C61, #4D4C61, transparent);
     color: #fff;
+    -webkit-animation: 1s slidein;
+    -moz-animation: 1s slidein;
     animation: 1s slide-in;
 }
 
@@ -155,24 +157,26 @@ div.description p{
 }
 
 #playerContainer.hide{
+    -webkit-animation: 1s slide-out;
+    -moz-animation: 1s slide-out;
     animation: 1s slide-out;
 }
 
 @keyframes slide-in {
     from {
-        height: 0;
+        bottom: -100px;
     }
     to {
-        height: 100px;
+        bottom: 0;
     }
 }
 
 @keyframes slide-out {
     from {
-        height: 100px;
+        bottom: 0;
     }
     to {
-        height: 0;
+        bottom: -100px;
     }
 }
 
@@ -268,6 +272,7 @@ div.description p{
     border: none;
     background: transparent;
 }
+
 #box_vol{
     height: 80px;
     width: 30px;
@@ -302,10 +307,14 @@ div.description p{
 
 #Volume:hover #box_vol {
     display: inline-flex;
+    -webkit-animation: 0.2s slide_box;
+    -moz-animation: 0.2s slide_box;
     animation: 0.2s slide_box;
 }
 
 #Volume:hover #change_vol {
+    -webkit-animation: 0.2s slide_vol;
+    -moz-animation: 0.2s slide_vol;
     animation: 0.2s slide_vol;
 }
 
@@ -341,6 +350,7 @@ div.description p{
 #time{
     display: inline;
 }
+
 /* Slider custom pour Chromium */
 #timeline::-webkit-slider-thumb {
     -webkit-appearance: none;
@@ -395,14 +405,42 @@ div.description p{
 	float: left;
 	background: linear-gradient(0.25turn, #7925a1, transparent);
 	position: absolute;
-	margin-top: 7%;
+    top: 254px;
 	width: 22%;
+    height: 500px;
+    display: none;
+    -webkit-animation: 0.2s slide_upgrades;
+    -moz-animation: 0.2s slide_upgrades;
+    animation: 0.2s slide_upgrades;
+}
+
+#upgradesMenu.hide{
+    -webkit-animation: 0.2s slide_upgrades_out;
+    -moz-animation: 0.2s slide_upgrades_out;
+    animation: 0.2s slide_upgrades_out;
+}
+
+@keyframes slide_upgrades {
+    from {
+        left: -30%;
+    }
+    to {
+        left: 0;
+    }
+}
+
+@keyframes slide_upgrades_out {
+    from {
+        left: 0;
+    }
+    to {
+        left: -30%;
+    }
 }
 
 #listeUpgrades{
 	color: white;
     top: 20%;
-	display: none;
     margin: 0 0 0 10%;
     text-shadow: black 0 0 10px;
     border-radius: 15px;
@@ -410,12 +448,17 @@ div.description p{
 
 #listeUpgrades li {
 	font-size: 22px;
-	margin-top: 15%;
+	margin-top: 6%;
 }
 
 #musicArtist{
     text-transform: uppercase;
     font-size: 22px;
+}
+
+#separator {
+    font-size: 32px;
+    margin-bottom: 15.5px;
 }
 
 #musicName{
