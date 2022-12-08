@@ -404,10 +404,11 @@ div.description p{
     padding: 20px;
     margin: 0 0 0 10%;
     color: white;
-    text-shadow: black 0 0 15px;
+    text-shadow: black 0 0 7px;
     background-color: #7925a1;
     border-radius: 15px;
 	cursor: pointer;
+    border: ridge #581c75;
 }
 
 #upgrades:hover{
@@ -422,15 +423,15 @@ div.description p{
 	width: 22%;
     height: 500px;
     display: none;
-    -webkit-animation: 0.2s slide_upgrades;
-    -moz-animation: 0.2s slide_upgrades;
-    animation: 0.2s slide_upgrades;
+    -webkit-animation: 0.5s slide_upgrades;
+    -moz-animation: 0.5s slide_upgrades;
+    animation: 0.5s slide_upgrades;
 }
 
 #upgradesMenu.hide{
-    -webkit-animation: 0.2s slide_upgrades_out;
-    -moz-animation: 0.2s slide_upgrades_out;
-    animation: 0.2s slide_upgrades_out;
+    -webkit-animation: 0.5s slide_upgrades_out;
+    -moz-animation: 0.5s slide_upgrades_out;
+    animation: 0.5s slide_upgrades_out;
 }
 
 @keyframes slide_upgrades {
@@ -459,8 +460,8 @@ div.description p{
 }
 
 #listeUpgrades li {
-    margin-top: 4%;
-	font-size: 22px;
+    margin-top: 3.2%;
+	font-size: 19px;
     min-height: 50px;
     word-wrap: break-word;
     height: auto;
